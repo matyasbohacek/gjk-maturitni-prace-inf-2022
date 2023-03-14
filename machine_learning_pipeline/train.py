@@ -118,7 +118,7 @@ def construct_preprocessing_transforms():
     """
 
     transforms_components = [
-        transforms.Resize(150),
+        transforms.Resize((150, 150)),
         transforms.ToTensor(),
         transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
     ]
