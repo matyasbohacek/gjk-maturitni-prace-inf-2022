@@ -210,8 +210,13 @@ if __name__ == "__main__":
 
     # the data is split as 80-20 train-val (which is considered standard)
     plant_village_dataset = datasets.ImageFolder(args.dataset_path, transform=construct_preprocessing_transforms())
-    train_set, val_set = torch.utils.data.random_split(plant_village_dataset, [int(0.8 * len(plant_village_dataset)),
-                                                                               int(0.2 * len(plant_village_dataset))])
+
+    # ensure that the split sizes add up to the full dataet size
+    dataset_size = len(plant_village_dataset)
+    train_size = int(0.8 * len(plant_village_dataset))
+    test_size = dataset_size - train_size
+
+    train_set, val_set = torch.utils.data.random_split(plant_village_dataset, [train_size, test_size])
 
     run = wandb.init(project=args.project_name, entity="matyasbohacek", config={
         "kernel-size": args.kernel_size,
