@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F536470229BB2AFA0098A49C /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = F536470129BB2AFA0098A49C /* SwiftCSV */; };
+		F565634A296779A3001853A7 /* PlantDisease.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5656349296779A3001853A7 /* PlantDisease.swift */; };
+		F565635229677B71001853A7 /* DatabaseLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565635129677B71001853A7 /* DatabaseLoadingManager.swift */; };
+		F565635329677B71001853A7 /* DatabaseLoadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565635129677B71001853A7 /* DatabaseLoadingManager.swift */; };
+		F565635629678118001853A7 /* DatabaseLoadingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565635429678118001853A7 /* DatabaseLoadingManagerTests.swift */; };
+		F565635B2968EF09001853A7 /* plantvillage-database.csv in Resources */ = {isa = PBXBuildFile; fileRef = F565635A2968EF09001853A7 /* plantvillage-database.csv */; };
+		F565635C2968EF09001853A7 /* plantvillage-database.csv in Resources */ = {isa = PBXBuildFile; fileRef = F565635A2968EF09001853A7 /* plantvillage-database.csv */; };
+		F565635D2968F06F001853A7 /* PlantDisease.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5656349296779A3001853A7 /* PlantDisease.swift */; };
+		F565635F2968F4FE001853A7 /* DiseaseDetailModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565635E2968F4FE001853A7 /* DiseaseDetailModal.swift */; };
+		F5B47284299F788600250402 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B47283299F788600250402 /* WelcomeView.swift */; };
+		F5B47286299F788E00250402 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B47285299F788E00250402 /* AboutView.swift */; };
+		F5B54C38292AC4AF002C21E5 /* PlantDiseaseIdentifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C37292AC4AF002C21E5 /* PlantDiseaseIdentifierApp.swift */; };
+		F5B54C3A292AC4AF002C21E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C39292AC4AF002C21E5 /* ContentView.swift */; };
+		F5B54C3C292AC4B3002C21E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B54C3B292AC4B3002C21E5 /* Assets.xcassets */; };
+		F5B54C3F292AC4B3002C21E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B54C3E292AC4B3002C21E5 /* Preview Assets.xcassets */; };
+		F5B54C53292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C52292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.swift */; };
+		F5B54C55292AC4B3002C21E5 /* PlantDiseaseIdentifierUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C54292AC4B3002C21E5 /* PlantDiseaseIdentifierUITestsLaunchTests.swift */; };
+		F5B54C66292ACAA8002C21E5 /* PlantDiseaseClassificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C65292ACAA8002C21E5 /* PlantDiseaseClassificationManager.swift */; };
+		F5B54C68292ACE5F002C21E5 /* ImageSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C67292ACE5F002C21E5 /* ImageSelectionController.swift */; };
+		F5B54C6A292ACF30002C21E5 /* ObservableImageDiseaseClassifierWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B54C69292ACF30002C21E5 /* ObservableImageDiseaseClassifierWrapper.swift */; };
+		F5F522B429B39A740003805B /* PlantDiseaseClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = F5F522B329B39A740003805B /* PlantDiseaseClassifier.mlpackage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5B54C45292AC4B3002C21E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B54C2C292AC4AF002C21E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B54C33292AC4AF002C21E5;
+			remoteInfo = PlantDiseaseIdentifier;
+		};
+		F5B54C4F292AC4B3002C21E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B54C2C292AC4AF002C21E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B54C33292AC4AF002C21E5;
+			remoteInfo = PlantDiseaseIdentifier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5656349296779A3001853A7 /* PlantDisease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDisease.swift; sourceTree = "<group>"; };
+		F565635129677B71001853A7 /* DatabaseLoadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLoadingManager.swift; sourceTree = "<group>"; };
+		F565635429678118001853A7 /* DatabaseLoadingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseLoadingManagerTests.swift; sourceTree = "<group>"; };
+		F565635A2968EF09001853A7 /* plantvillage-database.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "plantvillage-database.csv"; sourceTree = "<group>"; };
+		F565635E2968F4FE001853A7 /* DiseaseDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseDetailModal.swift; sourceTree = "<group>"; };
+		F5A9BB7329B9340F00EF22B8 /* SwiftCSV */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftCSV; sourceTree = "<group>"; };
+		F5B47283299F788600250402 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F5B47285299F788E00250402 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		F5B54C34292AC4AF002C21E5 /* Plant Disease Identifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Disease Identifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B54C37292AC4AF002C21E5 /* PlantDiseaseIdentifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseaseIdentifierApp.swift; sourceTree = "<group>"; };
+		F5B54C39292AC4AF002C21E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F5B54C3B292AC4B3002C21E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5B54C3E292AC4B3002C21E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F5B54C44292AC4B3002C21E5 /* PlantDiseaseIdentifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantDiseaseIdentifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B54C4E292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantDiseaseIdentifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B54C52292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseaseIdentifierUITests.swift; sourceTree = "<group>"; };
+		F5B54C54292AC4B3002C21E5 /* PlantDiseaseIdentifierUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseaseIdentifierUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5B54C65292ACAA8002C21E5 /* PlantDiseaseClassificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDiseaseClassificationManager.swift; sourceTree = "<group>"; };
+		F5B54C67292ACE5F002C21E5 /* ImageSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionController.swift; sourceTree = "<group>"; };
+		F5B54C69292ACF30002C21E5 /* ObservableImageDiseaseClassifierWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableImageDiseaseClassifierWrapper.swift; sourceTree = "<group>"; };
+		F5F522B329B39A740003805B /* PlantDiseaseClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = PlantDiseaseClassifier.mlpackage; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5B54C31292AC4AF002C21E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F536470229BB2AFA0098A49C /* SwiftCSV in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C41292AC4B3002C21E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C4B292AC4B3002C21E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F565634729677978001853A7 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F5A9BB7329B9340F00EF22B8 /* SwiftCSV */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		F565634B296779C3001853A7 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F5656349296779A3001853A7 /* PlantDisease.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		F565634C296779CD001853A7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F565635129677B71001853A7 /* DatabaseLoadingManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F565635729678E64001853A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5B47282299F773E00250402 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F5B54C39292AC4AF002C21E5 /* ContentView.swift */,
+				F565635E2968F4FE001853A7 /* DiseaseDetailModal.swift */,
+				F5B47283299F788600250402 /* WelcomeView.swift */,
+				F5B47285299F788E00250402 /* AboutView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F5B54C2B292AC4AF002C21E5 = {
+			isa = PBXGroup;
+			children = (
+				F565634729677978001853A7 /* Packages */,
+				F5B54C36292AC4AF002C21E5 /* PlantDiseaseIdentifier */,
+				F5B54C47292AC4B3002C21E5 /* PlantDiseaseIdentifierTests */,
+				F5B54C51292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests */,
+				F5B54C35292AC4AF002C21E5 /* Products */,
+				F565635729678E64001853A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5B54C35292AC4AF002C21E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B54C34292AC4AF002C21E5 /* Plant Disease Identifier.app */,
+				F5B54C44292AC4B3002C21E5 /* PlantDiseaseIdentifierTests.xctest */,
+				F5B54C4E292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5B54C36292AC4AF002C21E5 /* PlantDiseaseIdentifier */ = {
+			isa = PBXGroup;
+			children = (
+				F5F522B329B39A740003805B /* PlantDiseaseClassifier.mlpackage */,
+				F5B47282299F773E00250402 /* UI */,
+				F565635A2968EF09001853A7 /* plantvillage-database.csv */,
+				F565634C296779CD001853A7 /* Managers */,
+				F565634B296779C3001853A7 /* Objects */,
+				F5B54C37292AC4AF002C21E5 /* PlantDiseaseIdentifierApp.swift */,
+				F5B54C3B292AC4B3002C21E5 /* Assets.xcassets */,
+				F5B54C3D292AC4B3002C21E5 /* Preview Content */,
+				F5B54C65292ACAA8002C21E5 /* PlantDiseaseClassificationManager.swift */,
+				F5B54C67292ACE5F002C21E5 /* ImageSelectionController.swift */,
+				F5B54C69292ACF30002C21E5 /* ObservableImageDiseaseClassifierWrapper.swift */,
+			);
+			path = PlantDiseaseIdentifier;
+			sourceTree = "<group>";
+		};
+		F5B54C3D292AC4B3002C21E5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F5B54C3E292AC4B3002C21E5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F5B54C47292AC4B3002C21E5 /* PlantDiseaseIdentifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				F565635429678118001853A7 /* DatabaseLoadingManagerTests.swift */,
+			);
+			path = PlantDiseaseIdentifierTests;
+			sourceTree = "<group>";
+		};
+		F5B54C51292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B54C52292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.swift */,
+				F5B54C54292AC4B3002C21E5 /* PlantDiseaseIdentifierUITestsLaunchTests.swift */,
+			);
+			path = PlantDiseaseIdentifierUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5B54C33292AC4AF002C21E5 /* PlantDiseaseIdentifier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B54C58292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifier" */;
+			buildPhases = (
+				F5B54C30292AC4AF002C21E5 /* Sources */,
+				F5B54C31292AC4AF002C21E5 /* Frameworks */,
+				F5B54C32292AC4AF002C21E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlantDiseaseIdentifier;
+			packageProductDependencies = (
+				F536470129BB2AFA0098A49C /* SwiftCSV */,
+			);
+			productName = PlantDiseaseIdentifier;
+			productReference = F5B54C34292AC4AF002C21E5 /* Plant Disease Identifier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5B54C43292AC4B3002C21E5 /* PlantDiseaseIdentifierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B54C5B292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifierTests" */;
+			buildPhases = (
+				F5B54C40292AC4B3002C21E5 /* Sources */,
+				F5B54C41292AC4B3002C21E5 /* Frameworks */,
+				F5B54C42292AC4B3002C21E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B54C46292AC4B3002C21E5 /* PBXTargetDependency */,
+			);
+			name = PlantDiseaseIdentifierTests;
+			productName = PlantDiseaseIdentifierTests;
+			productReference = F5B54C44292AC4B3002C21E5 /* PlantDiseaseIdentifierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5B54C4D292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B54C5E292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifierUITests" */;
+			buildPhases = (
+				F5B54C4A292AC4B3002C21E5 /* Sources */,
+				F5B54C4B292AC4B3002C21E5 /* Frameworks */,
+				F5B54C4C292AC4B3002C21E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B54C50292AC4B3002C21E5 /* PBXTargetDependency */,
+			);
+			name = PlantDiseaseIdentifierUITests;
+			productName = PlantDiseaseIdentifierUITests;
+			productReference = F5B54C4E292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5B54C2C292AC4AF002C21E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					F5B54C33292AC4AF002C21E5 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					F5B54C43292AC4B3002C21E5 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F5B54C33292AC4AF002C21E5;
+					};
+					F5B54C4D292AC4B3002C21E5 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = F5B54C33292AC4AF002C21E5;
+					};
+				};
+			};
+			buildConfigurationList = F5B54C2F292AC4AF002C21E5 /* Build configuration list for PBXProject "PlantDiseaseIdentifier" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5B54C2B292AC4AF002C21E5;
+			productRefGroup = F5B54C35292AC4AF002C21E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5B54C33292AC4AF002C21E5 /* PlantDiseaseIdentifier */,
+				F5B54C43292AC4B3002C21E5 /* PlantDiseaseIdentifierTests */,
+				F5B54C4D292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5B54C32292AC4AF002C21E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F565635B2968EF09001853A7 /* plantvillage-database.csv in Resources */,
+				F5B54C3F292AC4B3002C21E5 /* Preview Assets.xcassets in Resources */,
+				F5B54C3C292AC4B3002C21E5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C42292AC4B3002C21E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F565635C2968EF09001853A7 /* plantvillage-database.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C4C292AC4B3002C21E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5B54C30292AC4AF002C21E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B54C3A292AC4AF002C21E5 /* ContentView.swift in Sources */,
+				F565634A296779A3001853A7 /* PlantDisease.swift in Sources */,
+				F5F522B429B39A740003805B /* PlantDiseaseClassifier.mlpackage in Sources */,
+				F5B54C66292ACAA8002C21E5 /* PlantDiseaseClassificationManager.swift in Sources */,
+				F5B47286299F788E00250402 /* AboutView.swift in Sources */,
+				F565635F2968F4FE001853A7 /* DiseaseDetailModal.swift in Sources */,
+				F5B54C68292ACE5F002C21E5 /* ImageSelectionController.swift in Sources */,
+				F5B47284299F788600250402 /* WelcomeView.swift in Sources */,
+				F565635229677B71001853A7 /* DatabaseLoadingManager.swift in Sources */,
+				F5B54C6A292ACF30002C21E5 /* ObservableImageDiseaseClassifierWrapper.swift in Sources */,
+				F5B54C38292AC4AF002C21E5 /* PlantDiseaseIdentifierApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C40292AC4B3002C21E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F565635329677B71001853A7 /* DatabaseLoadingManager.swift in Sources */,
+				F565635D2968F06F001853A7 /* PlantDisease.swift in Sources */,
+				F565635629678118001853A7 /* DatabaseLoadingManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B54C4A292AC4B3002C21E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B54C55292AC4B3002C21E5 /* PlantDiseaseIdentifierUITestsLaunchTests.swift in Sources */,
+				F5B54C53292AC4B3002C21E5 /* PlantDiseaseIdentifierUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5B54C46292AC4B3002C21E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B54C33292AC4AF002C21E5 /* PlantDiseaseIdentifier */;
+			targetProxy = F5B54C45292AC4B3002C21E5 /* PBXContainerItemProxy */;
+		};
+		F5B54C50292AC4B3002C21E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B54C33292AC4AF002C21E5 /* PlantDiseaseIdentifier */;
+			targetProxy = F5B54C4F292AC4B3002C21E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F5B54C56292AC4B3002C21E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5B54C57292AC4B3002C21E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5B54C59292AC4B3002C21E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"PlantDiseaseIdentifier/Preview Content\"";
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Plant Doctor AI";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take pictures of analyzed plants.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app uses the photo library to allow you to upload images of plants for disease analysis.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifier;
+				PRODUCT_NAME = "Plant Disease Identifier";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F5B54C5A292AC4B3002C21E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"PlantDiseaseIdentifier/Preview Content\"";
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Plant Doctor AI";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses the camera to take pictures of analyzed plants.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app uses the photo library to allow you to upload images of plants for disease analysis.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifier;
+				PRODUCT_NAME = "Plant Disease Identifier";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F5B54C5C292AC4B3002C21E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Disease Identifier.app/Plant Disease Identifier";
+			};
+			name = Debug;
+		};
+		F5B54C5D292AC4B3002C21E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifierTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Disease Identifier.app/Plant Disease Identifier";
+			};
+			name = Release;
+		};
+		F5B54C5F292AC4B3002C21E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlantDiseaseIdentifier;
+			};
+			name = Debug;
+		};
+		F5B54C60292AC4B3002C21E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLQ7CT33Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gjk.plantdisease.PlantDiseaseIdentifierUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlantDiseaseIdentifier;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5B54C2F292AC4AF002C21E5 /* Build configuration list for PBXProject "PlantDiseaseIdentifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B54C56292AC4B3002C21E5 /* Debug */,
+				F5B54C57292AC4B3002C21E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B54C58292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B54C59292AC4B3002C21E5 /* Debug */,
+				F5B54C5A292AC4B3002C21E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B54C5B292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B54C5C292AC4B3002C21E5 /* Debug */,
+				F5B54C5D292AC4B3002C21E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B54C5E292AC4B3002C21E5 /* Build configuration list for PBXNativeTarget "PlantDiseaseIdentifierUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B54C5F292AC4B3002C21E5 /* Debug */,
+				F5B54C60292AC4B3002C21E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F536470129BB2AFA0098A49C /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftCSV;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F5B54C2C292AC4AF002C21E5 /* Project object */;
+}
