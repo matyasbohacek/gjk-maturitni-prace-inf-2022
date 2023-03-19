@@ -1,7 +1,6 @@
 ![alt text](supporting_files/banner-tight-new.png)
 
-### MATURITNÍ PRÁCE / HIGH SCHOOL THESIS
-
+### MATURITNÍ PRÁCE 
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Mobilní aplikace na rozpoznávání nemocných rostlin
 
 **Abstrakt:**
@@ -9,6 +8,9 @@ Prudké nákazy rostlinných chorob mohou na malé a střední farmáře vytvá�
 
 **Klíčová slova:** rozpoznávání obrazu, nemoci rostlin, počítačové vidění, strojové učení, mobilní aplikace
 
+<br>
+
+### HIGH SCHOOL THESIS
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Mobile app for plant disease recognition
 
 **Abstract:**
@@ -16,3 +18,12 @@ For small- and mid-sized farmers, plant disease outbreaks can be a significant f
 
 **Keywords:** image recognition, plant diseases, computer vision, machine learning, mobile application
 
+<br>
+
+<hr>
+
+<br>
+
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Jak začít?
+
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> How to get started?
