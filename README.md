@@ -26,4 +26,12 @@ For small- and mid-sized farmers, plant disease outbreaks can be a significant f
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Jak začít?
 
+**Vývojáři:** Dokumentace projektu popisuje veškeré systémové požadavky a provede Vás instalací i spuštěním. Naleznete ji v přiložené [psané práci](supporting_files/thesis.pdf), konkrétně *Sekci 3 (Technical Documentation)*.
+
+**Uživatelé:** Máte-li iPhone, aplikaci si můžete zdarma stáhnout z [App Store](https://apps.apple.com/app/plant-doctor-ai/id6446052415). Pokud byste si nevěděli rady, uživatelskou příručku naleznete v přiložené [psané práci](supporting_files/thesis.pdf), konkrétně *Podsekci 3.3 (User Guide)*.
+
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> How to get started?
+
+**Developers:** The project's documentation contains all system requirements and walks you through installing and building the project. You can find it in the [attached paper](supporting_files/thesis.pdf), *Section 3 (Technical Documentation)*.
+
+**Users:** If you have an iPhone, you can download the app for free from the [App Store](https://apps.apple.com/app/plant-doctor-ai/id6446052415). If you run into any issues, you can refer to the user guide, located in the [attached paper](supporting_files/thesis.pdf), *Section 3 (Technical Documentation)*.
