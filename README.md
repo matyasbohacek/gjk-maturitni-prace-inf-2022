@@ -1,3 +1,5 @@
+![alt text](supporting_files/banner-tight-new.png)
+
 ### MATURITNÍ PRÁCE / HIGH SCHOOL THESIS
 
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Mobilní aplikace na rozpoznávání nemocných rostlin
