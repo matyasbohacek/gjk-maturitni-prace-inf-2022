@@ -10,7 +10,7 @@ Prudké nákazy rostlinných chorob mohou na malé a střední farmáře vytvá�
 
 <br>
 
-### HIGH SCHOOL THESIS
+### MATURA PROJECT ASSIGNMENT
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Mobile app for plant disease recognition
 
 **Abstract:**
@@ -50,7 +50,7 @@ Tímto bych chtěl poděkovat všem, kteří svými radami pomohli projekt i psa
 
 <br>
 
-## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Acknowledgements
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Acknowledgement
 
 I would hereby like to thank everyone who helped shape the project and the attached paper to their current form, especially my advisor, Ing. Šimon Schierreich. Moreover, I would like to express gratitude to the representatives of all agriculture- and biology-focus internet portals, who kindly allowed their resources to be linked from the app. Namely, these include [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/). Last but not least, I would like to thank my rubber duck, which heard me out whenever I could not figure out a bug.
 
