@@ -30,6 +30,8 @@ For small- and mid-sized farmers, plant disease outbreaks can be a significant f
 
 **Uživatelé:** Máte-li iPhone, aplikaci si můžete zdarma stáhnout z [App Store](https://apps.apple.com/app/plant-doctor-ai/id6446052415). Pokud byste si nevěděli rady, uživatelskou příručku naleznete v přiložené [psané práci](supporting_files/thesis.pdf), konkrétně *Podsekci 3.3 (User Guide)*.
 
+<br>
+
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> How to get started?
 
 **Developers:** The project's documentation contains all system requirements and walks you through installing and building the project. You can find it in the [attached paper](supporting_files/thesis.pdf), *Section 3 (Technical Documentation)*.
@@ -44,7 +46,10 @@ For small- and mid-sized farmers, plant disease outbreaks can be a significant f
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Poděkování
 
-Tímto bych chtěl poděkovat všem, kteří svými radami pomohli projekt i psanou práci dostat do její stávající podoby, zvláště pak mému školiteli, Ing. Šimonu Schierreichovi. Dále bych chtěl poděkovat všem zástupcům internetových portálů zaměřených na zemědělství a biologii, kteří laskavě svolili k tomu, aby jejich databáze mohly být z aplikace odkazované. Jmenovitě se jedná o [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/) . V neposlední řadě bych chtěl poděkovat mé gumové kačence, která mě vyslechla vždy, když jsem si s nějakým bugem nevěděl rady.
+Tímto bych chtěl poděkovat všem, kteří svými radami pomohli projekt i psanou práci dostat do její stávající podoby, zvláště pak mému školiteli, Ing. Šimonu Schierreichovi. Dále bych chtěl poděkovat všem zástupcům internetových portálů zaměřených na zemědělství a biologii, kteří laskavě svolili k tomu, aby jejich databáze mohly být z aplikace odkazované. Jmenovitě se jedná o [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/). V neposlední řadě bych chtěl poděkovat mé gumové kačence, která mě vyslechla vždy, když jsem si s nějakým bugem nevěděl rady.
+
+<br>
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Acknowledgements
 
+I would hereby like to thank everyone who helped shape the project and the attached paper to their current form, especially my advisor, Ing. Šimon Schierreich. Moreover, I would like to express gratitude to the representatives of all agriculture- and biology-focus internet portals, who kindly allowed for their resources to be linked from the app. Namely, these include [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/). Last but not least, I would like to thank my rubber duck, which heard me out whenever I could not figure out a bug.
