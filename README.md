@@ -35,3 +35,16 @@ For small- and mid-sized farmers, plant disease outbreaks can be a significant f
 **Developers:** The project's documentation contains all system requirements and walks you through installing and building the project. You can find it in the [attached paper](supporting_files/thesis.pdf), *Section 3 (Technical Documentation)*.
 
 **Users:** If you have an iPhone, you can download the app for free from the [App Store](https://apps.apple.com/app/plant-doctor-ai/id6446052415). If you run into any issues, you can refer to the user guide, located in the [attached paper](supporting_files/thesis.pdf), *Section 3 (Technical Documentation)*.
+
+<br>
+
+<hr>
+
+<br>
+
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Poděkování
+
+Tímto bych chtěl poděkovat všem, kteří svými radami pomohli projekt i psanou práci dostat do její stávající podoby, zvláště pak mému školiteli, Ing. Šimonu Schierreichovi. Dále bych chtěl poděkovat všem zástupcům internetových portálů zaměřených na zemědělství a biologii, kteří laskavě svolili k tomu, aby jejich databáze mohly být z aplikace odkazované. Jmenovitě se jedná o [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/) . V neposlední řadě bych chtěl poděkovat mé gumové kačence, která mě vyslechla vždy, když jsem si s nějakým bugem nevěděl rady.
+
+## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Acknowledgements
+
