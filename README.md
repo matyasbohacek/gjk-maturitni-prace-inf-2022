@@ -53,3 +53,13 @@ Tímto bych chtěl poděkovat všem, kteří svými radami pomohli projekt i psa
 ## <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Acknowledgements
 
 I would hereby like to thank everyone who helped shape the project and the attached paper to their current form, especially my advisor, Ing. Šimon Schierreich. Moreover, I would like to express gratitude to the representatives of all agriculture- and biology-focus internet portals, who kindly allowed their resources to be linked from the app. Namely, these include [Royal Horticultural Society](https://www.rhs.org.uk/), [The Old Farmer’s Almanac](https://www.almanac.com/), [Bayer Vegetables Solutions](https://www.vegetables.bayer.com/us/en-us.html), [MSU Extension Integrated Pest Management](https://www.canr.msu.edu/ipm/), [NC State Extension](https://www.ces.ncsu.edu/), [Center of Invasive Species Research](https://cisr.ucr.edu/), [PlantVillage](https://plantvillage.psu.edu/). Last but not least, I would like to thank my rubber duck, which heard me out whenever I could not figure out a bug.
+
+
+<br>
+
+
+
+> ### Matyáš Boháček
+> **E-mail:** matyas [dot] bohacek [at] matsworld.io
+>
+> **Socials:** [Google Scholar](https://scholar.google.com/citations?user=wDy1xBwAAAAJ) • [LinkedIn](https://www.linkedin.com/in/maty%C3%A1%C5%A1-boh%C3%A1%C4%8Dek-88350713a/) • [Twitter](https://twitter.com/matyas_bohacek)
