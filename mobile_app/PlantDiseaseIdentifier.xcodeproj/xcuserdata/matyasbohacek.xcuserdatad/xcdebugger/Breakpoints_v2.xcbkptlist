@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7EAE8BD8-A355-4099-9B57-43C06996583A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlantDiseaseIdentifier/UI/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9836CA55-921D-4332-BD62-DF3CE3BFCB2D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -62,10 +46,74 @@
             filePath = "PlantDiseaseIdentifier/PlantDiseaseClassificationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "classifyDiseases(image:)"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "classifyDisease(image:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B61E549D-885E-4E15-AF31-BB6A09DC49BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantDiseaseIdentifierTests/ObservableDatabaseLoadingWrapperTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3355F8D0-629C-45DB-8323-890CD35B6C14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlantDiseaseIdentifier/Observables/DatabaseLoadingManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "loadDatabase(fileURL:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3355F8D0-629C-45DB-8323-890CD35B6C14 - e96aaebf8bd35eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; () in Plant_Disease_Identifier.ObservableDatabaseLoadingWrapper.loadDatabase(fileURL: Foundation.URL) throws -&gt; Swift.Dictionary&lt;Swift.String, Plant_Disease_Identifier.PlantDisease&gt;"
+                  moduleName = "Plant Disease Identifier"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matyasbohacek/Library/Mobile%20Documents/com~apple~CloudDocs/school/maturita/informatika/PlantDiseaseIdentifier/PlantDiseaseIdentifier/Observables/DatabaseLoadingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "712">
+               </Location>
+               <Location
+                  uuid = "3355F8D0-629C-45DB-8323-890CD35B6C14 - e6fc2d055237941a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; () in PlantDiseaseIdentifierTests.ObservableDatabaseLoadingWrapper.loadDatabase(fileURL: Foundation.URL) throws -&gt; Swift.Dictionary&lt;Swift.String, PlantDiseaseIdentifierTests.PlantDisease&gt;"
+                  moduleName = "PlantDiseaseIdentifierTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matyasbohacek/Library/Mobile%20Documents/com~apple~CloudDocs/school/maturita/informatika/PlantDiseaseIdentifier/PlantDiseaseIdentifier/Observables/DatabaseLoadingManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "712">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

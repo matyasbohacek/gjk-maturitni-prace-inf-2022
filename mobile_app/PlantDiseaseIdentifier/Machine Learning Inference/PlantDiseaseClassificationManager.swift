@@ -4,6 +4,15 @@
 //
 //  Created by Matyáš Boháček on 20.11.2022.
 //
+//
+//  REFERENCES — Documentation, Code Reference, Forums
+//
+//    (None)
+//
+//  REFERENCES — Libraries
+//
+//    (None)
+//
 
 import CoreML
 import CoreImage
@@ -18,29 +27,31 @@ enum PlantDiseaseMLModelError: Error {
 struct PlantDiseaseClassificationManager {
     
     public var outputs: String?
+    
+    /// Size of the images expected at input to the classification ML model
     let inputSize = 150.0
     
     /**
-     TODO
+     Fits the largest possible rectangle to the center of the given image and crops it.
      
-     - Parameter image:
+     - Parameter input: CIImage of any proportion to be cropped
      
-     - Returns:
+     - Returns: Cropped rectangular CIImage
     */
-    private func cropLargestPossibleRectangle(input: CIImage) -> CIImage {
+    func cropLargestPossibleRectangle(input: CIImage) -> CIImage {
         
+        // Avoid unnecessary computation if the target is already satisfied
         if input.extent.size.width == input.extent.size.height {
             return input
         }
         
-        //
+        // Fit the largest rectangle
         let size: CGFloat
         if input.extent.size.width > input.extent.size.height {
             size = input.extent.size.height
         } else {
             size = input.extent.size.width
         }
-        
         let cropZone = CGRect(x: (input.extent.size.width - size) / 2, y: (input.extent.size.height - size) / 2, width: size, height: size)
         
         return input.cropped(to: cropZone)
@@ -48,13 +59,13 @@ struct PlantDiseaseClassificationManager {
     }
     
     /**
-     TODO
+     Scales the given image to the size expected at the input to the classification ML model.
      
-     - Parameter image:
+     - Parameter input: CIImage of any size to be scaled
      
-     - Returns:
+     - Returns: Scaled CIImage
     */
-    private func scaleImage(input: CIImage) -> CIImage {
+    func scaleImage(input: CIImage) -> CIImage {
         
         let scaleX = inputSize / input.extent.size.width
         let scaleY = inputSize / input.extent.size.height
@@ -72,7 +83,7 @@ struct PlantDiseaseClassificationManager {
      - Throws: PlantDiseaseMLModelError in case the model does not load properly or if the output does not match expected structure
      - Returns: Does not return – mutating function (per Swift's standard conventions, follow general-purpose language docs)
     */
-    mutating func classifyDiseases(image: CIImage) throws {
+    mutating func classifyDisease(image: CIImage) throws {
         
         // Pre-process the image to match the model's expected format
         var preprocessedImage = cropLargestPossibleRectangle(input: image)
@@ -95,7 +106,7 @@ struct PlantDiseaseClassificationManager {
             throw PlantDiseaseMLModelError.modelRepresentationMismatch
         }
         
-        // Only save the results if present
+        // Save the results only if the analysis finished successfully
         if let firstOutput = output.first {
             self.outputs = firstOutput.identifier
         }

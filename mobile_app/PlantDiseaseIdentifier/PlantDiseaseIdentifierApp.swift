@@ -4,6 +4,15 @@
 //
 //  Created by Matyáš Boháček on 20.11.2022.
 //
+//
+//  REFERENCES — Documentation, Code Reference, Forums
+//
+//    (None)
+//
+//  REFERENCES — Libraries
+//
+//    (None)
+//
 
 import SwiftUI
 import Photos
@@ -23,6 +32,9 @@ struct PlantDiseaseIdentifierApp: App {
         }
     }
     
+    /**
+     Presents the user with default prompts, asking for the access to the system camera and gallery.
+    */
     func askForCameraAndPhotosPermission() -> Void {
         if AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined {
             AVCaptureDevice.requestAccess(for: AVMediaType.video) { _ in

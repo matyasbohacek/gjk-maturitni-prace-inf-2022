@@ -4,64 +4,95 @@
 //
 //  Created by Matyáš Boháček on 05.01.2023.
 //
+//
+//  REFERENCES — Documentation, Code Reference, Forums
+//
+//    (None)
+//
+//  REFERENCES — Libraries
+//
+//    (None)
+//
 
 import Foundation
+import UIKit
 
 class PlantDisease {
     
-    let mlOutputClassName: String
+    /// Name of the plant disease in English in the format "[Crop name] — [Disease name / Healthy]"
     let name: String
     
+    /// Name of the corresponding class in the classification ML model
+    let mlOutputClassName: String
+    
+    /// Flag for healthy classes
     let isHealthy: Bool
+    
+    /// Instructions on how to identify the diagnosis (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
     let symptoms: String
+    
+    /// Description about how the diagnosed disease spreads (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
     let spread: String
+    
+    /// Instructions on how to prevent the diagnosed disease from re-occurring (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
     let prevention: String
     
-    let plantIconName: String
-    let plantDiseasePhotoName: String
+    /// Image with an icon of the plan
+    let plantIcon: UIImage
     
+    /// Image with the photo, showing an example of a plant with the diagnosed disease
+    let plantDiseasePhoto: UIImage
+    
+    /// Links to records in expert databases, structured as tuples with URLs and titles of the originating databases
     let expertInsights: [(URL, String)]
-
-    init(mlOutputClassName: String, name: String, isHealthy: Bool, symptoms: String, spread: String, prevention: String, plantIconName: String, plantDiseasePhotoName: String, expertInsights: [String]) {
-        self.mlOutputClassName = mlOutputClassName
-        self.name = name
-        
-        self.isHealthy = isHealthy
-        self.symptoms = symptoms
-        self.spread = spread
-        self.prevention = prevention
-        
-        self.plantIconName = plantIconName
-        self.plantDiseasePhotoName = plantDiseasePhotoName
-        
+    
+    /**
+     Adds human-readable titles to known biology- and agriculture-focused internet portals, based on their domains.
+     
+     - Parameter expertInsights: List of Strings, holding URLs with the external resources
+     
+     - Returns: List of tuples, each containing a URL and a String, with the link and its domain title, respectively
+    */
+    private static func preprocessLinksWithKnownPortals(expertInsights: [String]) -> [(URL, String)] {
         var expertInsightsPreprocessed = [(URL, String)]()
         
         for insightURLProposal in expertInsights {
             if let insightURLProposalConstructed = URL(string: insightURLProposal) {
+                var linkDescription = "Detail"
                 
-                // TODO: Pop into a separate method
-                var linkDescription = "Expert information"
                 if insightURLProposal.contains("almanac.com") {
-                    linkDescription = "Detail — The Old Farmer's Almanach"
+                    linkDescription += " — The Old Farmer's Almanach"
                 } else if insightURLProposal.contains("rhs.org.uk") {
-                    linkDescription = "Detail — Royal Horticultural Society"
+                    linkDescription += " — Royal Horticultural Society"
                 } else if insightURLProposal.contains("plantvillage.psu.edu") {
-                    linkDescription = "Detail — PlantVillage"
+                    linkDescription += " — PlantVillage"
                 } else if insightURLProposal.contains("cisr.ucr.edu") {
-                    linkDescription = "Detail — UCR Invasive Species Research"
+                    linkDescription += " — UCR Invasive Species Research"
                 } else if insightURLProposal.contains("ncsu.edu") {
-                    linkDescription = "Detail — NC State Extension"
+                    linkDescription += " — NC State Extension"
                 } else if insightURLProposal.contains("www.canr.msu.edu") {
-                    linkDescription = "Detail — MSUE Integrated Pest Management"
+                    linkDescription += " — MSUE Integrated Pest Management"
                 } else if insightURLProposal.contains("www.vegetables.bayer.com") {
-                    linkDescription = "Detail — Bayer Vegetables Solutions"
+                    linkDescription += " — Bayer Vegetables Solutions"
                 }
                 
                 expertInsightsPreprocessed.append((insightURLProposalConstructed, linkDescription))
             }
         }
         
-        self.expertInsights = expertInsightsPreprocessed
+        return expertInsightsPreprocessed
+    }
+
+    init(mlOutputClassName: String, name: String, isHealthy: Bool, symptoms: String, spread: String, prevention: String, plantIcon: UIImage, plantDiseasePhoto: UIImage, expertInsights: [String]) {
+        self.mlOutputClassName = mlOutputClassName
+        self.name = name
+        self.isHealthy = isHealthy
+        self.symptoms = symptoms
+        self.spread = spread
+        self.prevention = prevention
+        self.plantIcon = plantIcon
+        self.plantDiseasePhoto = plantDiseasePhoto
+        self.expertInsights = PlantDisease.preprocessLinksWithKnownPortals(expertInsights: expertInsights)
     }
     
 }
