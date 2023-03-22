@@ -208,16 +208,20 @@ if __name__ == "__main__":
     args = parser.parse_args()
     wandb.login(key=args.wandb_key)
 
-    # the data is split as 80-20 train-val (which is considered standard)
+    # the dataset must be structured in folders, which correspond to the classes
     plant_village_dataset = datasets.ImageFolder(args.dataset_path, transform=construct_preprocessing_transforms())
 
-    # ensure that the split sizes add up to the full dataet size
+    # ensure that the split sizes add up to the full dataset size; then split
     dataset_size = len(plant_village_dataset)
     train_size = int(0.8 * len(plant_village_dataset))
     test_size = dataset_size - train_size
 
+    # split the dataset into 80-20 train-val (considered standard)
     train_set, val_set = torch.utils.data.random_split(plant_village_dataset, [train_size, test_size])
+    plant_train_loader = torch.utils.data.DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
+    plant_test_loader = torch.utils.data.DataLoader(val_set, shuffle=True)
 
+    # send config to wandb
     run = wandb.init(project=args.project_name, entity="matyasbohacek", config={
         "kernel-size": args.kernel_size,
         "epochs": args.epochs,
@@ -240,9 +244,6 @@ if __name__ == "__main__":
                                                       dense=args.dense)
     plant_classification_net = plant_classification_net.to(DEVICE)
 
-    plant_train_loader = torch.utils.data.DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
-    plant_test_loader = torch.utils.data.DataLoader(val_set, shuffle=True)
-
     criterion_cel = nn.CrossEntropyLoss()
     optimizer_sgd = torch.optim.SGD(plant_classification_net.parameters(), lr=args.lr)
 
@@ -250,13 +251,11 @@ if __name__ == "__main__":
                                                      criterion_cel, optimizer_sgd)
 
     wandb.watch(plant_classification_net, criterion_cel, log="all", log_freq=10)
-
-    torch.save(plant_classification_net.state_dict(), "model.pt")
-    wandb.save("model.pt")
-
-    print(run_statistics)
-
     run.summary["top-validation-accuracy"] = run_statistics["validation_acc"].max()
     run.summary["top-train-accuracy"] = run_statistics["train_acc"].max()
+
+    # send the weights to wandb and save them locally
+    torch.save(plant_classification_net.state_dict(), "model.pt")
+    wandb.save("model.pt")
 
     run.finish()
