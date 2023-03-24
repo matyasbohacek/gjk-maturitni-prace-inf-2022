@@ -202,8 +202,8 @@ if __name__ == "__main__":
                         "to use with the hue augmentation")
 
     # parameters: weights & biases
-    parser.add_argument("--project-name", dest="project_name", type=str, default="identifier of the project in Weights "
-                        "& Biases")
+    parser.add_argument("--project-name", dest="project_name", type=str, default="", help="identifier of the project in"
+                        " Weights & Biases")
     parser.add_argument("--wandb-key", dest="wandb_key", type=str, default="", help="account key to access Weights & "
                         "Biases")
 
