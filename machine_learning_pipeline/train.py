@@ -104,9 +104,9 @@ def train(model, train_loader, test_loader, criterion, optimizer):
 
         statistics = statistics.append({
             "train_loss": float(loss.cpu().detach()),
-            "train_acc": float(acc.cpu().detach()),
-            "validation_loss": float(val_loss),
-            "validation_acc": float(val_acc)}, ignore_index=True)
+            "train_acc": acc,
+            "validation_loss": val_loss,
+            "validation_acc": val_acc}, ignore_index=True)
         print(f"epoch {i} loss:{total_loss / total_sample}  acc:{total_correct / total_sample}")
 
     return model, statistics
