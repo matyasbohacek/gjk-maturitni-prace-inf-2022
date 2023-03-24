@@ -1,6 +1,6 @@
 ![alt text](supporting_files/banner-tight-new.png)
 
-### MATURITNÍ PRÁCE 
+### MATURITNÍ PRÁCE [[PDF]](supporting_files/thesis.pdf)
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197576.png" style="width: 25px; padding-right: 10px;"> Mobilní aplikace na rozpoznávání nemocných rostlin
 
 **Abstrakt:**
@@ -10,7 +10,7 @@ Prudké nákazy rostlinnými chorobami mohou na malé a střední farmáře vytv
 
 <br>
 
-### MATURA PROJECT ASSIGNMENT
+### MATURA PROJECT ASSIGNMENT [[PDF]](supporting_files/thesis.pdf)
 # <img src="https://cdn-icons-png.flaticon.com/512/197/197484.png" style="width: 25px; padding-right: 10px;"> Mobile app for plant disease recognition
 
 **Abstract:**
