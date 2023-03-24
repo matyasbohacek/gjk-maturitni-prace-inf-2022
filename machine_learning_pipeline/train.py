@@ -200,13 +200,17 @@ if __name__ == "__main__":
                         "to use with the hue augmentation")
 
     # parameters: weights & biases
-    parser.add_argument("--project-name", dest="project_name", type=str, default="maturita--plant-identification-NEW")
-    parser.add_argument("--wandb-key", dest="wandb_key", type=str, default="beb8925bb5b17aaecd40139da4c299f76753291e",
-                        help="")
+    parser.add_argument("--project-name", dest="project_name", type=str, default="identifier of the project in Weights "
+                        "& Biases")
+    parser.add_argument("--wandb-key", dest="wandb_key", type=str, default="", help="account key to access Weights & "
+                        "Biases")
 
     # init wandb run for experiment tracking
     args = parser.parse_args()
-    wandb.login(key=args.wandb_key)
+
+    if args.wandb_key:
+        assert args.project_name, "when uploading stats to W&B, --project-name flag must be provided"
+        wandb.login(key=args.wandb_key)
 
     # the dataset must be structured in folders, which correspond to the classes
     plant_village_dataset = datasets.ImageFolder(args.dataset_path, transform=construct_preprocessing_transforms())
@@ -222,22 +226,23 @@ if __name__ == "__main__":
     plant_test_loader = torch.utils.data.DataLoader(val_set, shuffle=True)
 
     # send config to wandb
-    run = wandb.init(project=args.project_name, entity="matyasbohacek", config={
-        "kernel-size": args.kernel_size,
-        "epochs": args.epochs,
-        "dense": args.dense,
-        "feature-maps": [args.feature_map_size, args.feature_map_size],
-        "batch-size": args.batch_size,
-        "learning_rate": args.lr,
-        "transforms-color-jitter": args.transforms_color_jitter,
-        "transforms-random-crop": args.transforms_random_crop,
-        "transforms-rotation": args.transforms_rotation,
-        "rotation-deg": args.rotation_deg,
-        "crop-min-pix": args.crop_min_pix,
-        "brightness-range": args.brightness_range,
-        "saturation-range": args.saturation_range,
-        "hue-range": args.hue_range
-    })
+    if args.wandb_key:
+        run = wandb.init(project=args.project_name, entity="matyasbohacek", config={
+            "kernel-size": args.kernel_size,
+            "epochs": args.epochs,
+            "dense": args.dense,
+            "feature-maps": [args.feature_map_size, args.feature_map_size],
+            "batch-size": args.batch_size,
+            "learning_rate": args.lr,
+            "transforms-color-jitter": args.transforms_color_jitter,
+            "transforms-random-crop": args.transforms_random_crop,
+            "transforms-rotation": args.transforms_rotation,
+            "rotation-deg": args.rotation_deg,
+            "crop-min-pix": args.crop_min_pix,
+            "brightness-range": args.brightness_range,
+            "saturation-range": args.saturation_range,
+            "hue-range": args.hue_range
+        })
 
     plant_classification_net = PlantClassificationNet(kernel_size=args.kernel_size,
                                                       feature_maps=[args.feature_map_size, args.feature_map_size],
@@ -250,12 +255,14 @@ if __name__ == "__main__":
     plant_classification_net, run_statistics = train(plant_classification_net, plant_train_loader, plant_test_loader,
                                                      criterion_cel, optimizer_sgd)
 
-    wandb.watch(plant_classification_net, criterion_cel, log="all", log_freq=10)
+    if args.wandb_key:
+        wandb.watch(plant_classification_net, criterion_cel, log="all", log_freq=10)
     run.summary["top-validation-accuracy"] = run_statistics["validation_acc"].max()
     run.summary["top-train-accuracy"] = run_statistics["train_acc"].max()
 
-    # send the weights to wandb and save them locally
     torch.save(plant_classification_net.state_dict(), "model.pt")
-    wandb.save("model.pt")
 
-    run.finish()
+    # send the weights to wandb
+    if args.wandb_key:
+        wandb.save("model.pt")
+        run.finish()
