@@ -1,11 +1,10 @@
 
 import argparse
-
-import pandas as pd
 import torch
 import wandb
 import random
 
+import pandas as pd
 import torch.nn as nn
 import numpy as np
 
@@ -23,11 +22,11 @@ DEVICE = torch.device("cuda:0")
 
 def evaluate(model, test_loader, criterion):
     """
-    Evaluates the given model; calculates loss and accuracy on a validation/testing set.
+    Evaluates the given model by calculating loss and accuracy on the provided data.
 
     :param model: (torch.nn.Module) model to evaluate
-    :param test_loader: (torch.utils.data.DataLoader) testing set
-    :param criterion: (torch.nn.*Loss) module that calculates the loss function
+    :param test_loader: (torch.utils.data.DataLoader) testing/validation set
+    :param criterion: (torch.nn.*Loss) module calculating the loss function
 
     :return: (float, float) loss, accuracy
     """
@@ -40,6 +39,7 @@ def evaluate(model, test_loader, criterion):
         total_loss, total_sample, total_correct = 0, 0, 0
 
         for image, label in test_loader:
+
             # move data to GPU to match the model device
             image = image.to(DEVICE)
             label = label.to(DEVICE)
@@ -50,14 +50,15 @@ def evaluate(model, test_loader, criterion):
 
             total_loss += loss.item()
             total_sample += len(label)
-            total_correct += torch.sum(torch.max(output, 1)[1] == label).item() * 1.0
+            total_correct += int(torch.sum(torch.max(output, 1)[1] == label).item())
 
     return total_loss / total_sample, total_correct / total_sample
 
 
 def train(model, train_loader, test_loader, criterion, optimizer):
     """
-    Trains the given model for args.epochs — encompasses the full training loop according to global run parameters.
+    Trains the given model. This method encompasses the full training loop according to global run parameters – the
+    number of epochs is obtained from  for args.epochs.
 
     :param model: (torch.nn.Module) model to train
     :param train_loader: (torch.utils.data.DataLoader) training set, augmentations included
@@ -114,7 +115,7 @@ def train(model, train_loader, test_loader, criterion, optimizer):
 
 def construct_preprocessing_transforms():
     """
-    Constructs a composed set of pre-processing operations.
+    Constructs an ordered set of pre-processing operations.
 
     :return: (torchvision.transforms.transforms.Compose) sequence of operations
     """
@@ -130,7 +131,7 @@ def construct_preprocessing_transforms():
 
 def construct_augmentation_transforms():
     """
-    Constructs a composed set of augmentations based on the global parameters, most notably
+    Constructs an ordered set of augmentations based on the global parameters, most notably
     args.transforms_color_jitter, args.transforms_random_crop, args.transforms_rotation, args.rotation_deg,
     args.crop_min_pix, args.brightness_range, args.saturation_range, args.hue_range.
 
@@ -165,8 +166,8 @@ if __name__ == "__main__":
 
     # parameters: data
     parser.add_argument("--dataset-path", dest="dataset_path", type=str,
-                        default="/home/azureuser/localfiles/PlantVillage-Dataset/", help="path to the PlantVillage "
-                        "dataset, unzipped and structured in the default class-corresponding folder scheme")
+                        default="", help="path to the PlantVillage dataset, unzipped and structured in the default "
+                        "class-corresponding folder scheme")
 
     # parameters: training loop
     parser.add_argument("--epochs", type=int, default=20, help="number of epochs to train for")
