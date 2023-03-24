@@ -227,6 +227,8 @@ if __name__ == "__main__":
     plant_train_loader = torch.utils.data.DataLoader(train_set, batch_size=args.batch_size, shuffle=True)
     plant_test_loader = torch.utils.data.DataLoader(val_set, shuffle=True)
 
+    print("data loaded successfully — starting the training process...\n")
+
     # send config to wandb
     if args.wandb_key:
         run = wandb.init(project=args.project_name, entity="matyasbohacek", config={
@@ -262,11 +264,14 @@ if __name__ == "__main__":
         run.summary["top-validation-accuracy"] = run_statistics["validation_acc"].max()
         run.summary["top-train-accuracy"] = run_statistics["train_acc"].max()
 
-    print("top training accuracy:", run_statistics["train_acc"].max())
+    print("\ntop training accuracy:", run_statistics["train_acc"].max())
     print("top validation accuracy:", run_statistics["validation_acc"].max())
+
     torch.save(plant_classification_net.state_dict(), "model.pt")
+    print("\nmodel saved as `model.pt`")
 
     # send the weights to wandb
     if args.wandb_key:
         wandb.save("model.pt")
         run.finish()
+        print("\nmodel uploaded to weights & biases")
