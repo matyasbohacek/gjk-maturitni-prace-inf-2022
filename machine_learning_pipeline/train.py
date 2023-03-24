@@ -99,7 +99,9 @@ def train(model, train_loader, test_loader, criterion, optimizer):
 
         val_loss, val_acc = evaluate(model, test_loader, criterion)
 
-        wandb.log({"train_loss": loss, "train_acc": acc, "validation_loss": val_loss, "validation_acc": val_acc}, step=i)
+        if args.wandb_key:
+            wandb.log({"train_loss": loss, "train_acc": acc, "validation_loss": val_loss, "validation_acc": val_acc}, step=i)
+
         statistics = statistics.append({
             "train_loss": loss.cpu().detach(),
             "train_acc": acc.cpu(),
@@ -257,9 +259,11 @@ if __name__ == "__main__":
 
     if args.wandb_key:
         wandb.watch(plant_classification_net, criterion_cel, log="all", log_freq=10)
-    run.summary["top-validation-accuracy"] = run_statistics["validation_acc"].max()
-    run.summary["top-train-accuracy"] = run_statistics["train_acc"].max()
+        run.summary["top-validation-accuracy"] = run_statistics["validation_acc"].max()
+        run.summary["top-train-accuracy"] = run_statistics["train_acc"].max()
 
+    print("top training accuracy:", run_statistics["train_acc"].max())
+    print("top validation accuracy:", run_statistics["validation_acc"].max())
     torch.save(plant_classification_net.state_dict(), "model.pt")
 
     # send the weights to wandb
