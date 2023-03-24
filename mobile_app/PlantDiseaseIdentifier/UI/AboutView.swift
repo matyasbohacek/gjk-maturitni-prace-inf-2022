@@ -75,7 +75,7 @@ struct AboutView: View {
         .padding(.top, -30)
     }
     
-    /// View containing the 'Resources & Libraries' section with the links to relevant external resources
+    /// `View` containing the 'Resources & Libraries' section with links to relevant external resources
     var resourcesAndLibrariesSectionView: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -109,7 +109,7 @@ struct AboutView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    /// View containing the 'Safety & Privacy' section with the links to relevant external resources
+    /// `View` containing the 'Safety & Privacy' section with  links to relevant external resources
     var safetyAndPrivacySectionView: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -134,7 +134,7 @@ struct AboutView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    /// View containing the 'Contact' section with the links to relevant external resources
+    /// `View` containing the 'Contact' section with links to relevant external resources
     var contactSectionView: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -159,7 +159,7 @@ struct AboutView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
     
-    /// View containing the general description of the app, its origin, and its purpose
+    /// `View` containing the general description of the app, its origin, and purpose
     var generalDescriptionView: some View {
         VStack {
             Group {
@@ -171,7 +171,7 @@ struct AboutView: View {
         }
     }
     
-    /// Button that closes the modal (i.e., returns to the ContentView)
+    /// `Button` that closes the modal (i.e., returns to the `ContentView`)
     var closeButton: some View {
         VStack {
             HStack {

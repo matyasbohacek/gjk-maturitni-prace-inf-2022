@@ -17,7 +17,6 @@
 import SwiftUI
 import Foundation
 
-
 struct ImageSelectionController: UIViewControllerRepresentable {
     
     @Binding var isPresenting: Bool

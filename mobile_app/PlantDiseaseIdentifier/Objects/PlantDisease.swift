@@ -28,13 +28,13 @@ class PlantDisease {
     /// Flag for healthy classes
     let isHealthy: Bool
     
-    /// Instructions on how to identify the diagnosis (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
+    /// Instructions on how to identify the diagnosis (represented as `String` rather than `[String]` or `[enum]` since these are encyclopedic descriptions)
     let symptoms: String
     
-    /// Description about how the diagnosed disease spreads (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
+    /// Description about how the diagnosed disease spreads (represented as `String` rather than `[String]` or `[enum]` since these are encyclopedic descriptions)
     let spread: String
     
-    /// Instructions on how to prevent the diagnosed disease from re-occurring (represented as String rather than a list of Strings or enums since these are encyclopedic descriptions)
+    /// Instructions on how to prevent the diagnosed disease from re-occurring (represented as `String` rather than `[String]` or `[enum]` since these are encyclopedic descriptions)
     let prevention: String
     
     /// Image with an icon of the plan
@@ -49,9 +49,9 @@ class PlantDisease {
     /**
      Adds human-readable titles to known biology- and agriculture-focused internet portals, based on their domains.
      
-     - Parameter expertInsights: List of Strings, holding URLs with the external resources
+     - Parameter expertInsights: `[String]` holding `URL`s to the external resources
      
-     - Returns: List of tuples, each containing a URL and a String, with the link and its domain title, respectively
+     - Returns: `[(URL, String)]` where each item contains a `URL` and a `String`, with the link and its domain title, respectively
     */
     private static func preprocessLinksWithKnownPortals(expertInsights: [String]) -> [(URL, String)] {
         var expertInsightsPreprocessed = [(URL, String)]()

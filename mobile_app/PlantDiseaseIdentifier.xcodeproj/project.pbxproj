@@ -66,6 +66,7 @@
 		F565635429678118001853A7 /* ObservableDatabaseLoadingWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableDatabaseLoadingWrapperTests.swift; sourceTree = "<group>"; };
 		F565635A2968EF09001853A7 /* plantvillage-database.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "plantvillage-database.csv"; sourceTree = "<group>"; };
 		F565635E2968F4FE001853A7 /* DiseaseDetailModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseDetailModal.swift; sourceTree = "<group>"; };
+		F58DC4DF29CAE398008BC56D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F5A9BB7329B9340F00EF22B8 /* SwiftCSV */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftCSV; sourceTree = "<group>"; };
 		F5B47283299F788600250402 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		F5B47285299F788E00250402 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		F5B54C2B292AC4AF002C21E5 = {
 			isa = PBXGroup;
 			children = (
+				F58DC4DF29CAE398008BC56D /* README.md */,
 				F565634729677978001853A7 /* Packages */,
 				F5B54C36292AC4AF002C21E5 /* PlantDiseaseIdentifier */,
 				F5B54C47292AC4B3002C21E5 /* PlantDiseaseIdentifierTests */,

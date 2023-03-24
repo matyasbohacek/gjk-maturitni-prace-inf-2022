@@ -30,7 +30,7 @@ class ObservableImageDiseaseClassifierWrapper: ObservableObject {
      
      - Parameter image: UIImage to be classified
      
-     - Returns: Does not return — the name of the predicted class is saved as String, available through `.imageClass`
+     - Returns: Does not return — the name of the predicted class is saved as String, available through `.imageClass` (per Swift's standard convention, to allow for async UI observability, follow general-purpose language docs)
     */
     func classify(image: UIImage) {
         guard let ciImage = CIImage (image: image) else {

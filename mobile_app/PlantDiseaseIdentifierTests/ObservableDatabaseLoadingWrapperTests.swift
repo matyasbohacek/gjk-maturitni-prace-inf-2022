@@ -24,11 +24,9 @@ class ObservableDatabaseLoadingWrapperTests: XCTestCase {
         XCTAssertNoThrow(databaseWrapper = try ObservableDatabaseLoadingWrapper(fileURLPath: testCSVFilePath))
     }
 
-    override func tearDown() {
-        databaseWrapper = nil
-        super.tearDown()
-    }
-
+    /**
+     Tests the `ObservableDatabaseLoadingWrapper.loadDatabase()` method  by supplementing it with valid data and checking that expected representations are loaded.
+     */
     func testDatabaseLoading() {
         // For the purpose of this test case, a testing subsplit of the dataset was created
         let testFileURL = Bundle(for: type(of: self)).url(forResource: "plantvillage-database-test-subsplit", withExtension: "csv")!
@@ -49,17 +47,18 @@ class ObservableDatabaseLoadingWrapperTests: XCTestCase {
         }
     }
     
+    /**
+     Tests the `ObservableDatabaseLoadingWrapper.loadDatabase()` method  by supplementing it with two faulty files and making sure that adequate errors are thrown.
+     */
     func testInvalidDataLoading() {
-        // For the purpose of this test case, a testing subsplit of the dataset was created
+        // This file includes an incorrect header
         let testFileFaultyFormatURL = Bundle(for: type(of: self)).url(forResource: "plantvillage-database-test-subsplit-faulty-format", withExtension: "csv")!
-        let testFileFaultyDataURL = Bundle(for: type(of: self)).url(forResource: "plantvillage-database-test-subsplit-faulty-data", withExtension: "csv")!
-        
-        // TODO: test
         XCTAssertThrowsError(try databaseWrapper.loadDatabase(fileURL: testFileFaultyFormatURL)) { error in
             XCTAssertEqual(error as! DatabaseLoadingError, DatabaseLoadingError.incorrectFormat)
         }
         
-        // TODO: test
+        // This file includes links to images that are not part of the project
+        let testFileFaultyDataURL = Bundle(for: type(of: self)).url(forResource: "plantvillage-database-test-subsplit-faulty-data", withExtension: "csv")!
         XCTAssertThrowsError(try databaseWrapper.loadDatabase(fileURL: testFileFaultyDataURL)) { error in
             XCTAssertEqual(error as! DatabaseLoadingError, DatabaseLoadingError.linkedImageResourcesNonExistant)
         }

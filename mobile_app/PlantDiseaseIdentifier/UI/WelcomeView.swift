@@ -46,7 +46,7 @@ struct WelcomeView: View {
         .onAppear(perform: saveTutorialShown)
     }
     
-    /// View containing the title and icon of the view
+    /// `View` containing the title and icon of the view
     var titleHeaderView: some View {
         HStack {
             Image("tree-planting-1024")
@@ -70,7 +70,7 @@ struct WelcomeView: View {
         .padding(.top, -30)
     }
     
-    /// Button that ends the tutorial and closes the modal (i.e., returns to the ContentView)
+    /// `Button` that ends the tutorial and closes the modal (i.e., returns to the `ContentView`)
     var startButton: some View {
         Button(action: {
             dismiss()
@@ -90,7 +90,7 @@ struct WelcomeView: View {
         .cornerRadius(10)
     }
     
-    /// View containing the tutorial instructions
+    /// `View` containing the tutorial instructions
     var tutorialTextsView: some View {
         VStack(alignment: .leading) {
             Spacer()
@@ -105,7 +105,7 @@ struct WelcomeView: View {
         .padding(0)
     }
     
-    /// View containing the links to relevant legal documents
+    /// `View` containing the links to relevant legal documents
     var externalResourcesLinksView: some View {
         HStack {
             Spacer()
@@ -124,13 +124,13 @@ struct WelcomeView: View {
     // MARK: Methods
     
     /**
-     Creates a section of the tutorial text instructions from the given content.
+     Creates a section of the tutorial instructions from the given content.
      
-     - Parameter systemIcon: String with the system identifier of the desired section icon
-     - Parameter title: String with the title of the section
-     - Parameter body: String with the body of the section
+     - Parameter systemIcon: `String` with the system identifier of the desired section icon
+     - Parameter title: `String` with the title of the section
+     - Parameter body: `String` with the body of the section
      
-     - Returns: VStack (within SwiftUI)
+     - Returns: Corresponding `VStack` (within `SwiftUI`)
      */
     private func constructTutorialTextSection(systemIcon: String, title: String, body: String) -> some View {
         return VStack(alignment: .leading) {
@@ -156,7 +156,7 @@ struct WelcomeView: View {
     /**
      Notes that the tutorial has been presented so that it does not get shown again.
      
-     - Returns: Does not return — saves this information into app's UserDefaults
+     - Returns: Does not return — saves this information into app's UserDefaults (per Swift's standard convention, follow general-purpose language docs)
      */
     private func saveTutorialShown() -> Void {
         UserDefaults.standard.set(true, forKey: "tutorial-shown")

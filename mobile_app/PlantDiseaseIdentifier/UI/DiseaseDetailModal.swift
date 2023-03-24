@@ -50,7 +50,7 @@ struct DiseaseDetailModal: View {
         }
     }
     
-    /// Top view with the fading image, showing an example plant of the respective condition
+    /// Top `View` with the fading image, showing an example plant of the respective condition
     var topExampleImageView: some View {
         Image(uiImage: presentedPlantDisease.plantDiseasePhoto)
             .resizable()
@@ -61,7 +61,7 @@ struct DiseaseDetailModal: View {
             .mask(LinearGradient(gradient: Gradient(colors: [.clear, Color.white, Color.white]), startPoint: .bottom, endPoint: .top))
     }
     
-    /// View containing the title and icon of the plant condition
+    /// `View` containing the title and icon of the plant condition
     var plantIdentifierHeaderView: some View {
         HStack {
             Image(uiImage: presentedPlantDisease.plantIcon)
@@ -83,7 +83,7 @@ struct DiseaseDetailModal: View {
         }.frame(alignment: .leading).padding(.top, -30)
     }
     
-    /// View containing a status badge for healthy plants
+    /// `View` containing a status badge for healthy plants
     var healthyBadgeView: some View {
         HStack {
             Image("checkmark-1024")
@@ -93,7 +93,7 @@ struct DiseaseDetailModal: View {
         }
     }
     
-    /// View containing a status badge for diseased plants
+    /// `View` containing a status badge for diseased plants
     var diseasedBadgeView: some View {
         HStack {
             Image("doctors-bag-1024")
@@ -103,7 +103,7 @@ struct DiseaseDetailModal: View {
         }
     }
     
-    /// View containing the text description — symptoms, spread, and prevention — of diseased plants
+    /// `View` containing the text description — symptoms, spread, and prevention — of diseased plants
     var diseasedDescriptionView: some View {
         VStack(alignment: .leading) {
             Spacer()
@@ -135,7 +135,7 @@ struct DiseaseDetailModal: View {
         }.padding(0)
     }
     
-    /// View containing a generic text description of healthy plants
+    /// `View` containing a generic text description of healthy plants
     var healthyDescriptionView: some View {
         VStack(alignment: .leading) {
             Spacer()
@@ -144,7 +144,7 @@ struct DiseaseDetailModal: View {
         }.padding(0)
     }
     
-    /// Button that closes the modal (i.e., returns to the ContentView)
+    /// `Button` that closes the modal (i.e., returns to the `ContentView`)
     var closeButton: some View {
         VStack {
             HStack {
@@ -162,7 +162,7 @@ struct DiseaseDetailModal: View {
         }
     }
     
-    /// View containing buttons that link to external expert databases with relevant information about this condition
+    /// `View` containing buttons that link to external expert databases with relevant information about this condition
     var expertInsightButtonsView: some View {
         VStack {
             Spacer()
@@ -176,12 +176,12 @@ struct DiseaseDetailModal: View {
     // MARK: Methods
     
     /**
-     Creates an external internet link from the given title and URL.
+     Creates an external internet link from the given title and URL. If the user taps it, their default browser (Safari on most iOS devices) will open instantly.
      
-     - Parameter url: URL that should be linked
-     - Parameter sourceName: String with the title of the button
+     - Parameter url: `URL` to link
+     - Parameter sourceName: `String` with the title of the button
      
-     - Returns: Button (within SwiftUI)
+     - Returns: Corresponding `Button` (within `SwiftUI`)
      */
     func constructLinkButton(url: URL, sourceName: String) -> some View {
         return Button(action: {

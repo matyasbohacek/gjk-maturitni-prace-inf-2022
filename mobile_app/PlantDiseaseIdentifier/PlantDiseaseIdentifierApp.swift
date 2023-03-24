@@ -33,7 +33,7 @@ struct PlantDiseaseIdentifierApp: App {
     }
     
     /**
-     Presents the user with default prompts, asking for the access to the system camera and gallery.
+     Presents the user with default prompts, asking for the access to the system camera and image gallery.
     */
     func askForCameraAndPhotosPermission() -> Void {
         if AVCaptureDevice.authorizationStatus(for: .video) == .notDetermined {

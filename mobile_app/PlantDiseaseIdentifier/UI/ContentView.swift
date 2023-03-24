@@ -74,7 +74,7 @@ struct ContentView: View {
         .padding()
     }
     
-    /// Header view containing the app's logo, title, and a button that opens the AboutView
+    /// Header `View` containing the app's logo, title, and a button that opens the `AboutView`
     var headerView: some View {
         HStack {
             Text("Plant Doctor AI")
@@ -99,7 +99,7 @@ struct ContentView: View {
         .frame(alignment: .leading).padding(.trailing, 15)
     }
     
-    /// Center view with the selected input image
+    /// Center `View` with the selected input image
     var mainSelectedImageView: some View {
         ZStack (alignment: .top) {
             RoundedRectangle(cornerSize: CGSize(width: 16, height: 16))
@@ -128,7 +128,7 @@ struct ContentView: View {
         }.padding(.bottom, 1)
     }
     
-    /// Bottom view containing the classification results and a button that opens the DiseaseDetailModal
+    /// Bottom `View` containing the classification results and a button that opens the `DiseaseDetailModal`
     var classificationResultsView: some View {
         HStack {
             VStack (alignment: .leading) {
@@ -158,11 +158,11 @@ struct ContentView: View {
                             if manager.data.keys.contains(imageClass) {
                                 showingSheet.toggle()
                             } else {
-                                // TODO:
+                                // Present an error if the predicted diagnosis is not present in the underlying database
                                 showingUnknownDiagnosisAlert = true
                             }
                         } else {
-                            // TODO:
+                            // Present an error if the predicted diagnosis is not present in the underlying database
                             showingUnknownDiagnosisAlert = true
                         }
                     }) {
@@ -185,7 +185,7 @@ struct ContentView: View {
         .cornerRadius(16)
     }
     
-    /// Footer view containing the input selection buttons, which open the camera or photo gallery for input image selection
+    /// Footer `View` containing the input selection buttons, which open the camera or photo gallery for input image selection
     var actionButtonsPane: some View {
         HStack {
             Button(action: {
@@ -193,6 +193,7 @@ struct ContentView: View {
                 if readyToShowSelectionController() {
                     showingImageSelectionController = true
                 } else {
+                    // Present an error if the app does not yet hold rights to access this image data source
                     showingPhotoAccessAlert = true
                 }
             }) {
@@ -216,6 +217,7 @@ struct ContentView: View {
                 if readyToShowSelectionController() {
                     showingImageSelectionController = true
                 } else {
+                    // Present an error if the app does not yet hold rights to access this image data source
                     showingPhotoAccessAlert = true
                 }
             }) {
@@ -257,7 +259,7 @@ struct ContentView: View {
         }
     }
     
-    /// View wih the input image selection mechanism
+    /// `View` wih the input image selection mechanism wrapped inside `ImageSelectionController`
     var selectionView: some View {
         ImageSelectionController(isPresenting: $showingImageSelectionController, uiImage: $uiImage, sourceType: $sourceType)
             .onDisappear{
@@ -269,7 +271,7 @@ struct ContentView: View {
             }
     }
     
-    /// View containing tips for getting started, shown if no image is selected
+    /// `View` containing tips for getting started, shown if no image is selected
     var getStartedTipsView: some View {
         VStack {
             Spacer()
@@ -303,9 +305,9 @@ struct ContentView: View {
     // MARK: Methods
     
     /**
-     Determines whether all necessary permissions have been granted in order to open the camera or camera roll for input image selection.
+     Determines whether all necessary permissions have been granted in order to open the camera or ohoto gallery for input image selection.
      
-     - Returns: Bool representing desired image source readiness
+     - Returns: `Bool` representing the readiness of the desired image source
      */
     func readyToShowSelectionController() -> Bool {
         if sourceType == .photoLibrary && PHPhotoLibrary.authorizationStatus() != .authorized {
@@ -325,6 +327,7 @@ struct ContentView: View {
             showingDatabaseErrorAlert = false
         } catch {
             manager = ObservableDatabaseLoadingWrapper()
+            // Present an error if the underlying database failed to load
             showingDatabaseErrorAlert = true
         }
     }
