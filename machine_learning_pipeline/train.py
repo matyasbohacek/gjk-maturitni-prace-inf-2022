@@ -92,7 +92,7 @@ def train(model, train_loader, test_loader, criterion, optimizer):
 
             total_loss += loss
             total_sample += len(label)
-            total_correct += torch.sum(torch.max(output, 1)[1] == label) * 1.0
+            total_correct += int(torch.sum(torch.max(output, 1)[1] == label))
 
         loss = total_loss / total_sample
         acc = total_correct / total_sample
